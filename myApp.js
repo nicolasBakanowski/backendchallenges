@@ -17,9 +17,13 @@ app.get('/',function(req,res){
 
 app.get('/json',function(req,res){
     if(process.env.MESSAGE_STYLE == "uppercase"){
-        res.json("Hello Json".toUpperCase());
+        res.json({
+            "mesagge":"Hello Json".toUpperCase()
+        });
     }else{
-        res.json("Hello Json");
+        res.json({
+            "mesagge":"Hello Json"
+        });
        }
 })
 
