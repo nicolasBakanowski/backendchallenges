@@ -16,13 +16,13 @@ app.get('/',function(req,res){
 });
 
 app.get('/json',function(req,res){
-    if(process.env.MESSAGE_STYLE == "uppercase"){
+    if(process.env.MESSAGE_STYLE !== "uppercase"){
         res.json({
-            "mesagge":"Hello Json".toUpperCase()
+            "mesagge":"Hello Json"
         });
     }else{
         res.json({
-            "mesagge":"Hello Json"
+            "mesagge":"Hello Json".toUpperCase()
         });
        }
 })
