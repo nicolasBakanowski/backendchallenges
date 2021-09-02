@@ -15,6 +15,7 @@ app.get('/',function(req,res){
 });
 
 app.get('/json',function(req,res){
+    console.log(process.env.MESAGGE_STYLE)
     res.json({
         "message":process.env.MESAGGE_STYLE
     });
