@@ -1,6 +1,7 @@
 var express = require('express');
 const { allowedNodeEnvironmentFlags } = require('process');
 var app = express();
+require('dotenv').config
 
 pathtoTemplate = __dirname + '/views/index.html'
 pathtoPublic = __dirname +'/public'
@@ -15,9 +16,8 @@ app.get('/',function(req,res){
 });
 
 app.get('/json',function(req,res){
-    alert(process.env.MESAGGE_STYLE);
     res.json({
-        "message":process.env.MESAGGE_STYLE
+        "message":process.env.MESSAGE_STYLE
     });
 })
 
