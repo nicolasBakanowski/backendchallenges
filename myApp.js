@@ -2,6 +2,7 @@ var express = require('express');
 const { allowedNodeEnvironmentFlags } = require('process');
 var app = express();
 require('dotenv').config()
+process.env.MESSAGE_STYLE='uppercase';
 
 pathtoTemplate = __dirname + '/views/index.html'
 pathtoPublic = __dirname +'/public'
