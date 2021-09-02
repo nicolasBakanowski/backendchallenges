@@ -6,7 +6,7 @@ pathtoTemplate = __dirname + '/views/index.html'
 pathtoPublic = __dirname +'/public'
 
 
-app.use("/public", express.static(pathtoPublic));
+app.use("/public", express.static(pathtoPublic,'public'));
 
 app.get('/',function(req,res){
     res.sendFile(pathtoTemplate);
