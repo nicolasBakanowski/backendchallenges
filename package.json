@@ -2,7 +2,7 @@
 	"author":"nicolas Bakanowski",	
 	"name": "fcc-learn-npm-package-json",
 	"description":"this code is a challenge",
-	"keywords":["nodejs","example","challenge"],
+	"keywords":["nodejs","example","challenge","freecodecamp"],
 	"dependencies": {
 		"express": "^4.14.0"
 	},
