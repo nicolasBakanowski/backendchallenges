@@ -20,10 +20,9 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 
 
-app.get('/',function(req,res,next){
+app.get('/',function(req,res){
    
     res.sendFile(pathtoTemplate);
-    next()
 });
 
 app.get('/json', function(req, res){
