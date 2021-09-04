@@ -38,7 +38,12 @@ return res.json(response);
 });
 
 
-
+app.get('/now', function(req,res,next){
+  req.time = new Date().toString();
+  next();
+},function(req,res){
+  return res.send({"time": req.time})
+})
 
 
 
