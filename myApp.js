@@ -2,7 +2,7 @@ var express = require('express');
 const { allowedNodeEnvironmentFlags } = require('process');
 var app = express();
 require('dotenv').config()
-
+var bodyParser = require('body-parser')
 pathtoTemplate = __dirname + '/views/index.html'
 pathtoPublic = __dirname +'/public'
 
@@ -15,7 +15,10 @@ app.use(function(req,res,next){
     next()
 
 })
- 
+app.use(bodyParser.urlencoded({extended: false}))
+
+app.use(bodyParser.json());
+
 
 app.get('/',function(req,res,next){
    
